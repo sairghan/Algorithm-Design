@@ -53,12 +53,12 @@ We use DFS to go through all vertices, using used[] to label a used vertex, and 
   
 If we build a tree of a graph on a paper, using a random vertex as the root. We can see the smallest cycle straightforwardly. For example, the graph below:
 
-![Preview] (https://github.com/sairghan/Graph-Problems-Isomorphism-Finding-Girth/blob/master/img-path/Capture.PNG)
+![Preview] (https://github.com/sairghan/Algorithm-Design/Graph-Problems-Isomorphism-Finding-Girth/blob/master/img-path/Capture.PNG)
 
 
 Use 1 as the root, let's build the corresponding small tree.
 
-![Preview] (https://github.com/sairghan/Graph-Problems-Isomorphism-and-Finding-Girth/blob/master/img-path/new.PNG)
+![Preview](https://github.com/sairghan/Algorithm-Design/Graph-Problems-Isomorphism-and-Finding-Girth/blob/master/img-path/new.PNG)
 
 As we can see above, the hierarchy is very clear, all we need to do is to BFS the tree, and find the node 2, which is the child node of 4 and 6. It is pretty easy to find such a node.
 
@@ -76,7 +76,7 @@ In this task, like isomorphism problem, we still need a label[] array to label t
 
 Below is the main part of the BFS process.
 
-![Preview](https://github.com/sairghan/Graph-Problems-Isomorphism-and-Finding-Girth/blob/master/img-path/BFS.PNG)            
+![Preview](https://github.com/sairghan/Algorithm-Design/Graph-Problems-Isomorphism-and-Finding-Girth/blob/master/img-path/BFS.PNG)            
                  
 The time complexity of BFS is O(m + n), where m is the number of edges and n is the number of vertices. But we have an outer loop to try all vertex as the root, while(root < n - 2 && short > 3). So the time complexity is O(n * (m + n)).
 
